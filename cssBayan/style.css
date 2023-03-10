@@ -1,5 +1,5 @@
 body{
-    background-color: mistyrose;
+    background-color: rgb(87, 87, 87);
 }
 
 .wrapper{
@@ -11,6 +11,42 @@ body{
 img{
     display: block;
     margin: 0 auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.border{
+    border-bottom: solid 0.1em;
+    border-color: yellowgreen;
+    cursor: pointer;
+}
+
+.border:hover summary{
+    color: yellowgreen;
+    transition: 10ms;
+}
+
+.title{
+    font-family: "Arimo";
+    color: yellowgreen;
+}
+
+summary{
+    font-family: "Arimo";
+    font-size: 2rem;
+    color: black;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details:hover{
+    color:yellowgreen ;
+}
+
+.slothzy-container{
+    border: none;
 }
 
 .deadline-img{
@@ -20,3 +56,4 @@ img{
 .deadline:hover .deadline-img{
     display: block;
 }
+
