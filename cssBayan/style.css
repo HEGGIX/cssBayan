@@ -1,0 +1,22 @@
+body{
+    background-color: mistyrose;
+}
+
+.wrapper{
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+.deadline-img{
+    display: none;
+}
+
+.deadline:hover .deadline-img{
+    display: block;
+}
