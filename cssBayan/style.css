@@ -15,15 +15,25 @@ img{
     padding-bottom: 3%;
 }
 
+.cross-img{
+    position: absolute;
+    right: 0;
+    padding-right: 0.5rem;
+    transform: translateY(-75%);
+}
+
+
 .border{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     border-bottom: solid 0.1em;
     border-color: yellowgreen;
     cursor: pointer;
 }
 
-.border:hover summary{
+.border:hover .item{
     color: yellowgreen;
-    transition: 10ms;
+    transition: 0.5s;
 }
 
 .title{
@@ -31,29 +41,49 @@ img{
     color: yellowgreen;
 }
 
-summary{
+.slothzy-container{
+    border: none;
+}
+
+.border:active{
+    background: #3e4b2f;
+    cursor: pointer;
+    transition: 1.7s;
+    opacity: 0.6;
+}
+    
+.show{
+    display: none;
+}
+
+.item:active{
+    background: #3e4b2f;
+    cursor: pointer;
+    transition: 1.7s;
+    opacity: 0.6;
+}
+
+.item:hover + .show{
+    display: block;
+    cursor: pointer;
+    transition: 1.7s;
+}
+
+.item:checked + .show{
+    display: block;
+}
+
+.item{
+    visibility: hidden;
+}
+
+.label-text{
     font-family: "Arimo";
     font-size: 2rem;
     color: black;
 }
 
-summary::-webkit-details-marker {
-    display: none;
+.label-text:hover{
+    color: yellowgreen;
+    transition: 0.5s;
 }
-
-details:hover{
-    color:yellowgreen ;
-}
-
-.slothzy-container{
-    border: none;
-}
-
-.deadline-img{
-    display: none;
-}
-
-.deadline:hover .deadline-img{
-    display: block;
-}
-
