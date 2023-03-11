@@ -16,6 +16,7 @@ img{
 }
 
 .plus-img{
+    display: block;
     position: absolute;
     padding-right: 0.5rem;
     transform: translateY(-75%);
@@ -40,6 +41,7 @@ img{
 .title{
     font-family: "Arimo";
     color: yellowgreen;
+    font-size: 2.7em;
 }
 
 .slothzy-container{
@@ -70,6 +72,10 @@ img{
     transition: 10s;
 }
 
+.item:hover + .plus-img{
+    display: none;
+}
+
 .item:checked + .show{
     display: block;
     transition: 10s;
@@ -81,11 +87,35 @@ img{
 
 .label-text{
     font-family: "Arimo";
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: black;
 }
 
 .label-text:hover{
     color: yellowgreen;
     transition: 0.5s;
+}
+
+@media screen and (max-width: 821px) {
+    .title{
+        font-size: 2em;
+    }
+
+    .label-text{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 321px){
+    .label-text{
+        font-size: 1.2em;
+    }
+
+    .title{
+        font-size: 1.4em;
+    }
+
+    .show{
+        width: 70%;
+    }
 }
