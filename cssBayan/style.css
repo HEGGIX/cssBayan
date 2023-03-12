@@ -67,18 +67,17 @@ img{
 }
 
 .item:hover + .show{
+    animation: fade 1.5s ease-in-out;
     display: block;
     cursor: pointer;
-    transition: 10s;
 }
 
 .item:hover + .plus-img{
-    display: none;
+    visibility: hidden;
 }
 
 .item:checked + .show{
     display: block;
-    transition: 10s;
 }
 
 .item{
@@ -91,9 +90,37 @@ img{
     color: black;
 }
 
-.label-text:hover{
+/* .label-text:hover{
     color: yellowgreen;
     transition: 0.5s;
+} */
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (hover:hover){
+    .item:hover + .show{
+        display: block;
+        cursor: pointer;
+        transition: 10s;
+    }
+    
+    .item:hover + .plus-img{
+        display: none;
+    }
+
+    .border:hover .item{
+        color: yellowgreen;
+        transition: 0.5s;
+        animation: fade 1.5s ease-in-out;
+    }
+
+    .label-text:hover{
+        color: yellowgreen;
+        transition: 0.5s;
+    }
 }
 
 @media screen and (max-width: 821px) {
