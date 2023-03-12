@@ -1,0 +1,148 @@
+body{
+    background-color: rgb(87, 87, 87);
+}
+
+.wrapper{
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.plus-img{
+    display: block;
+    position: absolute;
+    padding-right: 0.5rem;
+    transform: translateY(-75%);
+    right: 0;
+}
+
+
+.border{
+    position: relative;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: solid 0.1em;
+    border-color: yellowgreen;
+    cursor: pointer;
+}
+
+.border:hover .item{
+    color: yellowgreen;
+    transition: 0.5s;
+}
+
+.title{
+    font-family: "Arimo";
+    color: yellowgreen;
+    font-size: 2.7em;
+}
+
+.slothzy-container{
+    border: none;
+}
+
+.border:active{
+    background: #3e4b2f;
+    cursor: pointer;
+    transition: 1.7s;
+    opacity: 0.6;
+}
+    
+.show{
+    display: none;
+}
+
+.item:active{
+    background: #3e4b2f;
+    cursor: pointer;
+    transition: 1.7s;
+    opacity: 0.6;
+}
+
+.item:hover + .show{
+    animation: fade 1.5s ease-in-out;
+    display: block;
+    cursor: pointer;
+}
+
+.item:hover + .plus-img{
+    visibility: hidden;
+}
+
+.item:checked + .show{
+    display: block;
+}
+
+.item{
+    visibility: hidden;
+}
+
+.label-text{
+    font-family: "Arimo";
+    font-size: 2.1rem;
+    color: black;
+}
+
+/* .label-text:hover{
+    color: yellowgreen;
+    transition: 0.5s;
+} */
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (hover:hover){
+    .item:hover + .show{
+        display: block;
+        cursor: pointer;
+        transition: 10s;
+    }
+    
+    .item:hover + .plus-img{
+        display: none;
+    }
+
+    .border:hover .item{
+        color: yellowgreen;
+        transition: 0.5s;
+        animation: fade 1.5s ease-in-out;
+    }
+
+    .label-text:hover{
+        color: yellowgreen;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 821px) {
+    .title{
+        font-size: 2em;
+    }
+
+    .label-text{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 321px){
+    .label-text{
+        font-size: 1.2em;
+    }
+
+    .title{
+        font-size: 1.4em;
+    }
+
+    .show{
+        width: 70%;
+    }
+}
